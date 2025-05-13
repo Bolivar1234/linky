@@ -71,8 +71,8 @@ const nextConfig: NextConfig = {
 };
 
 export default withSentryConfig(nextConfig, {
-  org: 'hyperdusk',
-  project: 'glow',
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
   silent: false,
   sourcemaps: {
     deleteSourcemapsAfterUpload: true,
