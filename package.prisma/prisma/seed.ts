@@ -4,6 +4,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
+  console.log('Starting seed script...');
   const initialUser = await prisma.user.upsert({
     where: {
       id: '62b6a104-6f6e-44e2-b610-801b5e103b29',
@@ -16,6 +17,7 @@ async function main() {
       role: 'user',
     },
   });
+  console.log('Initial user upserted:', initialUser);
 
   const initialTeam = await prisma.organization.upsert({
     where: {
@@ -34,9 +36,10 @@ async function main() {
       },
     },
   });
+  console.log('Initial team upserted:', initialTeam);
 
   // Default Theme
-  await prisma.theme.upsert({
+  const defaultTheme = await prisma.theme.upsert({
     where: {
       id: '00441c91-6762-44d8-8110-2b5616825bd9',
     },
@@ -55,9 +58,10 @@ async function main() {
       colorBgBase: defaultThemeSeeds.Default.colorBgBase,
     },
   });
+  console.log('Default theme upserted:', defaultTheme);
 
   // Purple Theme
-  await prisma.theme.upsert({
+  const purpleTheme = await prisma.theme.upsert({
     where: {
       id: '14fc9bdf-f363-4404-b05e-856670722fda',
     },
@@ -76,9 +80,10 @@ async function main() {
       colorBgBase: defaultThemeSeeds.Purple.colorBgBase,
     },
   });
+  console.log('Purple theme upserted:', purpleTheme);
 
   // Black Theme
-  await prisma.theme.upsert({
+  const blackTheme = await prisma.theme.upsert({
     where: {
       id: '1e24ab02-9b97-4a61-9b83-fe278a41b30b',
     },
@@ -97,9 +102,10 @@ async function main() {
       colorBgBase: defaultThemeSeeds.Black.colorBgBase,
     },
   });
+  console.log('Black theme upserted:', blackTheme);
 
   // Forest Theme
-  await prisma.theme.upsert({
+  const forestTheme = await prisma.theme.upsert({
     where: {
       id: '4c47b21f-9183-4e7a-be6c-6ee4fabae92a',
     },
@@ -118,9 +124,10 @@ async function main() {
       colorBgBase: defaultThemeSeeds.Forest.colorBgBase,
     },
   });
+  console.log('Forest theme upserted:', forestTheme);
 
   // Lilac Theme
-  await prisma.theme.upsert({
+  const lilacTheme = await prisma.theme.upsert({
     where: {
       id: '0192b479-69c1-7bb4-936d-26f9e3a2024f',
     },
@@ -139,9 +146,10 @@ async function main() {
       colorBgBase: defaultThemeSeeds.Lilac.colorBgBase,
     },
   });
+  console.log('Lilac theme upserted:', lilacTheme);
 
   // OrangePunch Theme
-  await prisma.theme.upsert({
+  const orangePunchTheme = await prisma.theme.upsert({
     where: {
       id: '44ddcc5a-aa85-45b9-b333-3ddcbe7d7db3',
     },
@@ -160,6 +168,8 @@ async function main() {
       colorBgBase: defaultThemeSeeds.OrangePunch.colorBgBase,
     },
   });
+  console.log('OrangePunch theme upserted:', orangePunchTheme);
+  console.log('Seed script finished successfully.');
 }
 
 main()
