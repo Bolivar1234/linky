@@ -43,12 +43,14 @@
     "tsx": "^4.16.0",
     "zod": "^3.2"
   },
+  "optionalDependencies": {
+  },
   "devDependencies": {
     "fastify-tsconfig": "^2.0.0",
     "typescript": "^5"
   },
   "scripts": {
-    "preinstall": "npm install --platform=linux --arch=x64 sharp",
+    "postinstall": "(npm uninstall sharp && npm install --platform=linux --arch=x64 sharp) || echo 'Sharp rebuild attempted. Continuing...'",
     "dev": "dotenvx run -f ../.env.local -- tsx watch src",
     "start:api": "node dist/index.js",
     "build:api": "node build.js && npm run sentry:sourcemaps",
