@@ -3,7 +3,7 @@ export default function LegalTermsPage() {
     <div className="bg-[#FCFBF8] px-6 py-32 lg:px-8">
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <p className="text-base font-semibold leading-7 text-orange-600">
-          Linky
+          Givee
         </p>
         <h1 className="mt-2 text-3xl font-black font-serf tracking-tight text-gray-900 sm:text-4xl">
           Terms of Service
@@ -11,11 +11,11 @@ export default function LegalTermsPage() {
         <p className="mt-6 text-xl leading-8">Last updated: March 3rd 2025</p>
         <div className="mt-10 max-w-2xl prose">
           <h2 className="font-srf">1. Introduction</h2>
-          <p>Welcome to Linky (“Company”, “we”, “our”, “us”)!</p>
+          <p>Welcome to Givee (“Company”, “we”, “our”, “us”)!</p>
           <p>
             These Terms of Service (“Terms”, “Terms of Service”) govern your use
-            of our web application located at lin.ky (together or individually
-            “Service”) operated by Linky.
+            of our web application located at giv.e (together or individually
+            “Service”) operated by Givee.
           </p>
           <p>
             Our Privacy Policy also governs your use of our Service and explains
@@ -60,7 +60,7 @@ export default function LegalTermsPage() {
           </p>
           <h2 className="font-srf">5. Content</h2>
           <p>
-            Content found on or through this Service are the property of Linky
+            Content found on or through this Service are the property of Givee
             or used with permission. You may not distribute, modify, transmit,
             reuse, download, repost, copy, or use said Content, whether in whole
             or in part, for commercial purposes or for personal gain, without
@@ -116,7 +116,7 @@ export default function LegalTermsPage() {
           <p>
             Service and its original content (excluding Content provided by
             users), features and functionality are and will remain the exclusive
-            property of Linky and its licensors.
+            property of Givee and its licensors.
           </p>
           <h2 className="font-srf">11. Error Reporting and Feedback</h2>
           <p>
@@ -168,7 +168,7 @@ export default function LegalTermsPage() {
             Please send your feedback, comments, requests for technical support
             by email: support@giv.ee.
           </p>
-          <p>Linky - lin.ky</p>
+          <p>Givee - giv.e</p>
         </div>
       </div>
     </div>

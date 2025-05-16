@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Learn - Linky',
+  title: 'Learn - Givee',
 };
 
 const learnPostCategories: Record<
@@ -14,7 +14,7 @@ const learnPostCategories: Record<
     title: string;
   }
 > = {
-  linky: {
+  Givee: {
     title: 'Linky',
   },
   'link-in-bio': {
@@ -46,7 +46,7 @@ export default async function LearnLandingPage() {
                 </span>
               </h1>
               <div className="mt-6 max-w-3xl text-xl text-slate-900">
-                <p>Common questions and answers about Linky and link-in-bio.</p>
+                <p>Common questions and answers about Givee and link-in-bio.</p>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ export default function TrialFinishedEmail() {
   return (
     <Html>
       <Head />
-      <Preview>Your Linky Premium trial has ended</Preview>
+      <Preview>Your Givee Premium trial has ended</Preview>
       <Tailwind>
         <Body style={styles.main}>
           <Container style={styles.container}>
@@ -32,7 +32,7 @@ export default function TrialFinishedEmail() {
               </Text>
 
               <Text style={styles.paragraph}>
-                Login to the Linky dashboard at any point to choose a new plan,
+                Login to the Givee dashboard at any point to choose a new plan,
                 and carry on where you left off!
               </Text>
               <SignOff />

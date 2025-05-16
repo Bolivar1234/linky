@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blog | Linky',
+  title: 'Blog | Givee',
 };
 
 export const revalidate = 300;
@@ -35,7 +35,7 @@ export default async function ArticlesLandingPage() {
               <div className="mt-6 max-w-3xl text-xl text-slate-800">
                 <p>
                   Product updates, tutorials, and other helpful content from the
-                  Linky team.
+                 Givee team.
                 </p>
               </div>
             </div>

@@ -6,8 +6,8 @@ import { Metadata } from 'next';
 import { headers } from 'next/headers';
 
 export const metadata: Metadata = {
-  title: 'Pricing | Linky',
-  description: 'Take Linky to the next level with one of our paid plans.',
+  title: 'Pricing | Givee',
+  description: 'Take Givee to the next level with one of our paid plans.',
 };
 
 export default async function PricingPage() {
@@ -26,7 +26,7 @@ export default async function PricingPage() {
           Get Premium.
         </h1>
         <p className="mt-6 text-xl font-medium text-gray-600">
-          Take Linky to the next level with one of our paid plans.
+          Take Givee to the next level with one of our paid plans.
         </p>
       </MarketingContainer>
       <section className="py-16">

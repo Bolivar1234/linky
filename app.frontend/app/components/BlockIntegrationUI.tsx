@@ -162,7 +162,7 @@ export function BlockIntegrationUI({
             <div className="mt-4">
               <span className="font-normal text-stone-600 mt-1">
                 You already have an {integrationUIConfig[integrationType].name}{' '}
-                account connected to Linky. Select your account below, or
+                account connected to Givee. Select your account below, or
                 connect a new one.
               </span>
               <Select onValueChange={handleSelectIntegration}>

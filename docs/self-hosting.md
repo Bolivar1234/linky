@@ -3,7 +3,7 @@
 > [!WARNING]
 > This guide is currently a work in progress.
 
-This guide will help you self-host Linky on your own infrastructure. Follow these steps to get your instance up and running.
+This guide will help you self-host Givee on your own infrastructure. Follow these steps to get your instance up and running.
 
 We recommend first following the [local development guide](./local-development.md) to get your instance running locally.
 
@@ -96,7 +96,7 @@ The migrations will be run automatically when you deploy the API.
 
 ## Step 4: Running the applications.
 
-Linky uses [Turbo](https://turbo.build/) to run the frontend and backend applications. As such, you will need to use the following commands to run the applications:
+Givee uses [Turbo](https://turbo.build/) to run the frontend and backend applications. As such, you will need to use the following commands to run the applications:
 
 Frontend:
 

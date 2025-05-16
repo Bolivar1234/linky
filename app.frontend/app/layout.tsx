@@ -15,28 +15,28 @@ const seasonFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Linky - A delightfully rich link-in-bio.',
+  title: 'Givee - A delightfully rich link-in-bio.',
   description:
-    'Create your own dynamic link in bio page effortlessly with Linky, the personal page builder designed to help you stand out and connect with your audience.',
-  metadataBase: new URL('https://lin.ky'),
+    'Create your own dynamic link in bio page effortlessly with Givee, the personal page builder designed to help you stand out and connect with your audience.',
+  metadataBase: new URL('https://giv.ee'),
   openGraph: {
     images: [
       {
-        url: 'https://lin.ky/assets/og.png',
+        url: 'https://giv.ee/assets/og.png',
       },
     ],
     type: 'website',
-    url: 'https://lin.ky',
+    url: 'https://giv.ee',
     title: 'Linky',
     description:
-      'Create your own dynamic link in bio page effortlessly with Linky, the personal page builder designed to help you stand out and connect with your audience.',
+      'Create your own dynamic link in bio page effortlessly withGivee, the personal page builder designed to help you stand out and connect with your audience.',
     siteName: 'Linky',
   },
   twitter: {
     card: 'summary_large_image',
     site: '@trylinky',
     creator: '@trylinky',
-    images: 'https://lin.ky/assets/og.png',
+    images: 'https://giv.ee/assets/og.png',
   },
 };
 

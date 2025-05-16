@@ -216,7 +216,7 @@ export function PricingTable({
       if (res.success) {
         toast({
           title: 'Welcome to Premium!',
-          description: 'You can now access all of Linky’s premium features.',
+          description: 'You can now access all of Givee’s premium features.',
         });
         if (onComplete) {
           onComplete();
@@ -406,7 +406,7 @@ export function PricingTable({
             </AlertTitle>
             <AlertDescription>
               Your personal team has a premium subscription due to being
-              associated with a team on the Linky Team plan. There are no
+              associated with a team on the Givee Team plan. There are no
               further upgrades available for your personal team!
             </AlertDescription>
           </Alert>

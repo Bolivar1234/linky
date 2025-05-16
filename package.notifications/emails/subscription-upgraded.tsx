@@ -18,9 +18,9 @@ export default function SubscriptionUpgradedEmail({
 }) {
   const title =
     planName === 'team'
-      ? 'Welcome to Linky Teams'
+      ? 'Welcome to Givee Teams'
       : planName === 'premium'
-        ? 'Welcome to Linky Premium'
+        ? 'Welcome to Givee Premium'
         : 'Your subscription has been upgraded';
   return (
     <Html>
@@ -39,13 +39,13 @@ export default function SubscriptionUpgradedEmail({
               {planName === 'team' && (
                 <>
                   <Text style={styles.paragraph}>
-                    Welcome to Linky Teams! You can now invite up to 5 team
-                    members to join, each of which will receive Linky Premium
+                    Welcome to Givee Teams! You can now invite up to 5 team
+                    members to join, each of which will receive Givee Premium
                     access.
                   </Text>
                   <Text style={styles.paragraph}>
                     If you had an existing personal subscription, we've
-                    cancelled this as it is now included in your Linky Teams
+                    cancelled this as it is now included in your Givee Teams
                     plan.
                   </Text>
                   <Text style={styles.paragraph}>
@@ -58,7 +58,7 @@ export default function SubscriptionUpgradedEmail({
               {planName === 'premium' && (
                 <>
                   <Text style={styles.paragraph}>
-                    Welcome to Linky Premium! You now have access to all of our
+                    Welcome to Givee Premium! You now have access to all of our
                     features, including creating unlimited pages, custom
                     domains, page analytics, and more.
                   </Text>

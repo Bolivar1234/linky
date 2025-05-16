@@ -64,13 +64,13 @@ export function EditForm({
 
                       const initialUploadedIcon = !values.items[
                         index
-                      ].icon.src.startsWith('https://cdn.lin.ky/default-data')
+                      ].icon.src.startsWith('https://cdn.giv.ee/default-data')
                         ? values.items[index].icon.src
                         : undefined;
 
                       const initialTab = values.items[
                         index
-                      ].icon.src?.startsWith('https://cdn.lin.ky/default-data')
+                      ].icon.src?.startsWith('https://cdn.giv.ee/default-data')
                         ? 'iconGallery'
                         : 'uploadCustom';
 

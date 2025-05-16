@@ -22,37 +22,17 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.dev.lin.ky',
+        hostname: 'cdn.dev.giv.ee',
         port: '',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.lin.ky',
+        hostname: 'cdn.giv.ee',
         port: '',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.dev.glow.as',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.glow.as',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'glow.as',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'lin.ky',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'eu-west-2.graphassets.com',
+        hostname: 'us-west-2.cdn.hygraph.com',
         port: '',
       },
       ...(process.env.NODE_ENV === 'development'

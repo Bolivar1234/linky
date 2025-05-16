@@ -12,7 +12,7 @@ export interface LinkBoxBlockConfig {
 
 export const linkBoxBlockDefaults: LinkBoxBlockConfig = {
   icon: {
-    src: 'https://cdn.lin.ky/default-data/x-logo.png',
+    src: 'https://cdn.giv.e/default-data/x-logo.png',
   },
   link: 'https://x.com/trylinky',
   title: 'X',

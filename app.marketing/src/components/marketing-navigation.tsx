@@ -76,7 +76,7 @@ export default function MarketingNavigation({ children }: Props) {
                         </span>
                         <span className="text-sm text-black/60">
                           Some of the best link-in-bio pages created by the
-                          Linky community.
+                          Givee community.
                         </span>
                       </div>
                     </Link>
@@ -93,7 +93,7 @@ export default function MarketingNavigation({ children }: Props) {
                         </span>
                         <span className="text-sm text-black/60">
                           Product updates, tutorials, and other helpful content
-                          from the Linky team.
+                          from the Givee team.
                         </span>
                       </div>
                     </Link>
@@ -109,7 +109,7 @@ export default function MarketingNavigation({ children }: Props) {
                           Learn
                         </span>
                         <span className="text-sm text-black/60">
-                          Common questions and answers about Linky and
+                          Common questions and answers about Givee and
                           link-in-bio.
                         </span>
                       </div>

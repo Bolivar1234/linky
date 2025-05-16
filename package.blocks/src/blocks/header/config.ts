@@ -13,7 +13,7 @@ export interface HeaderBlockConfig {
 
 export const headerBlockDefaults: HeaderBlockConfig = {
   avatar: {
-    src: 'https://cdn.lin.ky/default-data/avatar.png',
+    src: 'https://cdn.giv.e/default-data/avatar.png',
   },
   title: 'Hello World',
   description: 'Welcome to your new page',

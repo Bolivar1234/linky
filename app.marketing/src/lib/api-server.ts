@@ -9,7 +9,7 @@ export const apiServerFetch = async (
     'Content-Type': 'application/json',
   };
 
-  return fetch(`https://api.lin.ky${path}`, {
+  return fetch(`https://api.giv.e${path}`, {
     headers,
     body: requestOptions.body,
     ...requestOptions,

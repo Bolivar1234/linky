@@ -46,13 +46,13 @@ export function EditForm({
     >
       {({ isSubmitting, setFieldValue, errors, values }) => {
         const initialUploadedIcon = !initialValues?.icon?.src.startsWith(
-          'https://cdn.lin.ky/default-data'
+          'https://cdn.giv.ee/default-data'
         )
           ? initialValues?.icon?.src
           : undefined;
 
         const initialTab = values?.icon?.src?.startsWith(
-          'https://cdn.lin.ky/default-data'
+          'https://cdn.giv.ee/default-data'
         )
           ? 'iconGallery'
           : 'uploadCustom';

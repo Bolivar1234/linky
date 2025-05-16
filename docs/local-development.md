@@ -3,7 +3,7 @@
 > [!WARNING]
 > This guide is currently a work in progress.
 
-This guide will help you get Linky running locally. Follow these steps to get your instance up and running.
+This guide will help you get Givee running locally. Follow these steps to get your instance up and running.
 
 ## Prerequisites
 

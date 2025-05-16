@@ -128,11 +128,11 @@ export default function MarketingFooter() {
                   </div>
                 </Link>
                 <p className="max-w-xs text-sm text-gray-200">
-                  The ultimate open source link-in-bio platform that lets
+                  The ultimate link-in-bio platform that lets
                   creators create.
                 </p>
                 <p className="text-sm leading-5 text-white/50">
-                  © 2023 - {new Date().getFullYear()} Linky - Hyperdusk Ltd
+                  © 2023 - {new Date().getFullYear()} Givee - Quantic Impact PBC
                 </p>
                 <div className="flex items-center space-x-3">
                   {socialLinks.map((link) => (
@@ -177,7 +177,7 @@ export default function MarketingFooter() {
                       What is a link in bio?
                     </SitemapLink>
                     <SitemapLink href="/i/learn/what-is-linky">
-                      What is Linky?
+                      What is Givee?
                     </SitemapLink>
                     <SitemapLink href="/i/blog">Blog</SitemapLink>
                   </SitemapLinks>

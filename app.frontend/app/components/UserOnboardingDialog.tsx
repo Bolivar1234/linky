@@ -70,7 +70,7 @@ export function UserOnboardingDialog() {
             />
           </svg>
           <DialogTitle className="text-center font-bold text-2xl mb-1">
-            Welcome to Linky
+            Welcome to Givee
           </DialogTitle>
           <span className="text-center text-slate-600">
             You just created your first page!

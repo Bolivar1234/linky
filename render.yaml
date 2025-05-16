@@ -1,38 +1,139 @@
+version: '1'
+
 databases:
-  - name: glow-db
-    databaseName: glow_szcw
-    user: glow_szcw_user
-    plan: basic-256mb
-    region: frankfurt
-    ipAllowList:
-      - source: 0.0.0.0/0
-        description: everywhere
+  - name: givee-db
+    databaseName: givee
+    user: givee_user
+    plan: starter
+    region: virginia
     postgresMajorVersion: '16'
     diskSizeGB: 1
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: Allow all
+
 services:
   - type: web
-    name: glow-api
+    name: givee-api
     runtime: node
-    repo: https://github.com/trylinky/linky
+    repo: https://github.com/Bolivar1234/linky
     plan: starter
+    region: virginia
+
+    buildCommand: |
+      npm install &&
+      turbo run prisma:migrate prisma:generate --filter=@trylinky/prisma &&
+      turbo run build:api --filter=@trylinky/api
+
+    startCommand: turbo run start:api
+
     envVars:
-      - key: INSTAGRAM_CLIENT_SECRET
+      # Environment mode
+      - key: APP_ENV
+        value: production
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+
+      # App URLs
+      - key: APP_FRONTEND_URL
+        value: https://www.giv.ee
+      - key: NEXT_PUBLIC_APP_URL
+        value: https://www.giv.ee
+      - key: NEXT_PUBLIC_API_URL
+        value: https://api.giv.ee
+      - key: API_BASE_URL
+        value: https://api.giv.ee/api
+      - key: BETTER_AUTH_URL
+        value: https://api.giv.ee/api/auth
+
+      # Security & API keys
+      - key: INTERNAL_API_KEY
         sync: false
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: AUTH_SECRET
+        sync: false
+
+      # Email (Resend)
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_AUDIENCE_ID
+        sync: false
+      - key: EMAIL_FROM
+        value: "Givee <team@notifications.giv.ee>"
+      - key: EMAIL_REPLY_TO
+        value: "team@giv.ee"
+
+      # Sentry
+      - key: SENTRY_DSN
+        sync: false
+      - key: SENTRY_AUTH_TOKEN
+        sync: false
+      - key: SENTRY_ORG
+        value: getgivee
+      - key: SENTRY_PROJECT
+        value: givee
+
+      # Tinybird / Analytics
+      - key: TINYBIRD_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_TINYBIRD_TRACKER_TOKEN
+        sync: false
+      - key: POSTHOG_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_POSTHOG_HOST
+        value: https://us.posthog.com
+
+      # Slack
+      - key: SLACK_TOKEN
+        sync: false
+      - key: SLACK_CLIENT_ID
+        sync: false
+      - key: SLACK_CLIENT_SECRET
+        sync: false
+      - key: SLACK_NEW_USER_CHANNEL_ID
+        sync: false
+
+      # AWS (S3 / Storage)
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1
+      - key: REACTIONS_TABLE_NAME
+        sync: false
+
+      # Stripe
+      - key: STRIPE_API_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+
+      # Social Auth Providers
+      - key: AUTH_GOOGLE_CLIENT_ID
+        sync: false
+      - key: AUTH_GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: AUTH_TWITTER_CLIENT_ID
+        sync: false
+      - key: AUTH_TWITTER_CLIENT_SECRET
+        sync: false
+      - key: AUTH_TIKTOK_CLIENT_ID
+        sync: false
+      - key: AUTH_TIKTOK_CLIENT_KEY
+        sync: false
+      - key: AUTH_TIKTOK_CLIENT_SECRET
+        sync: false
+
+      # Social integrations
       - key: INSTAGRAM_CLIENT_ID
         sync: false
+      - key: INSTAGRAM_CLIENT_SECRET
+        sync: false
       - key: INSTAGRAM_CALLBACK_URL
-        sync: false
-      - key: INSTAGRAM_LEGACY_CLIENT_SECRET
-        sync: false
-      - key: INSTAGRAM_LEGACY_CALLBACK_URL
-        sync: false
-      - key: TIKTOK_CALLBACK_URL
-        sync: false
-      - key: TIKTOK_CLIENT_SECRET
-        sync: false
-      - key: TIKTOK_CLIENT_KEY
-        sync: false
-      - key: INSTAGRAM_LEGACY_CLIENT_ID
         sync: false
       - key: THREADS_CLIENT_ID
         sync: false
@@ -46,72 +147,22 @@ services:
         sync: false
       - key: SPOTIFY_REDIRECT_URL
         sync: false
-      - key: APP_FRONTEND_URL
-        sync: false
-      - key: ENCRYPTION_KEY
-        sync: false
-      - key: STRIPE_API_SECRET_KEY
-        sync: false
-      - key: STRIPE_WEBHOOK_SECRET
-        sync: false
-      - key: POSTHOG_API_KEY
-        sync: false
-      - key: APP_ENV
-        sync: false
-      - key: AWS_ACCESS_KEY_ID
-        sync: false
-      - key: AWS_SECRET_ACCESS_KEY
-        sync: false
-      - key: AWS_REGION
-        sync: false
-      - key: REACTIONS_TABLE_NAME
-        sync: false
-      - key: DIRECT_URL
-        fromDatabase:
-          name: linky-production
-          property: connectionString
-      - key: DATABASE_URL
-        fromDatabase:
-          name: linky-production
-          property: connectionString
-      - key: SENTRY_DSN
-        sync: false
-      - key: SENTRY_AUTH_TOKEN
-        sync: false
-      - key: PORT
-        sync: false
-      - key: NODE_ENV
-        sync: false
-      - key: AUTH_TRUST_HOST
-        sync: false
-      - key: AUTH_SECRET
-        sync: false
-      - key: TINYBIRD_API_KEY
-        sync: false
+
+      # Screenshot or Mapbox
       - key: SCREENSHOT_API_KEY
         sync: false
-      - key: AUTH_GOOGLE_CLIENT_ID
+      - key: NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
         sync: false
-      - key: AUTH_GOOGLE_CLIENT_SECRET
-        sync: false
-      - key: AUTH_TIKTOK_CLIENT_ID
-        sync: false
-      - key: AUTH_TIKTOK_CLIENT_KEY
-        sync: false
-      - key: AUTH_TIKTOK_CLIENT_SECRET
-        sync: false
-      - key: AUTH_TWITTER_CLIENT_ID
-        sync: false
-      - key: AUTH_TWITTER_CLIENT_SECRET
-        sync: false
-      - key: RESEND_API_KEY
+      - key: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
         sync: false
 
-    region: frankfurt
-    buildCommand:
-      npm install && turbo run prisma:migrate prisma:generate --filter=@trylinky/prisma && turbo run build:api
-      --filter=@trylinky/api
-    startCommand: turbo run start:api
+      # Database connections (linked to Render DB above)
+      - key: DIRECT_URL
+        value: postgresql://givee_user:n6X2bnTWufPNDOlWJSJu2H9uP00xN3Hz@dpg-d0j9s5re5dus73c9l2l0-a.virginia-postgres.render.com/givee
+      - key: DATABASE_URL
+        fromDatabase:
+          name: givee-db
+          property: connectionString
+
     domains:
-      - api.lin.ky
-version: '1'
+      - api.giv.ee

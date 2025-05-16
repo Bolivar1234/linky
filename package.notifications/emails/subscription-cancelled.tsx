@@ -15,7 +15,7 @@ export default function SubscriptionCancelledEmail() {
   return (
     <Html>
       <Head />
-      <Preview>Your Linky subscription has been cancelled</Preview>
+      <Preview>Your Givee subscription has been cancelled</Preview>
       <Tailwind>
         <Body style={styles.main}>
           <Container style={styles.container}>
@@ -33,7 +33,7 @@ export default function SubscriptionCancelledEmail() {
 
               <Text style={styles.paragraph}>
                 If you would like to re-subscribe, you can do so at any time via
-                the Linky app.
+                the Givee app.
               </Text>
 
               <Text style={styles.paragraph}>

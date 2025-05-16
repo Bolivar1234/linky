@@ -139,7 +139,7 @@ export function EditPageSettingsGeneral({ initialValues, pageId }: Props) {
             <div className="border-b border-white/10 pb-12">
               <div>
                 <FormField
-                  withPrefix="lin.ky/"
+                  withPrefix="giv.ee/"
                   label="Handle"
                   name="pageSlug"
                   placeholder="your-page"

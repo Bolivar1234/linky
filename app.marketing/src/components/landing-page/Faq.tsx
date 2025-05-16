@@ -9,9 +9,9 @@ import {
 
 const landingPageQuestions = [
   {
-    question: 'What is Linky?',
+    question: 'What is Givee?',
     answer:
-      "Linky is a single link that you can use to house all the links to your social media profiles, websites, and other content. It's a great way to share all your content in one place, whether it be your favourite songs on Spotify, or a link to your latest products.",
+      "Givee is a single link that you can use to house all the links to your social media profiles, websites, and other content. It's a great way to share all your content in one place, whether it be your favourite songs on Spotify, or a link to your latest products.",
   },
   {
     question: 'What does link in bio mean?',
@@ -19,9 +19,9 @@ const landingPageQuestions = [
       "A link in bio is a single link that you can use to house all of the links that you want to share with your audience. Whether you're a creator sharing links to your social media profiles, or a business sharing links to your products and services, a link in bio is a great way to share all your content in one place.",
   },
   {
-    question: 'Why do I need Linky?',
+    question: 'Why do I need Givee?',
     answer:
-      'Linky is a singular link solution designed to bridge your audience to every aspect of your digital presence—encompassing who you are, what you do, and what matters to you. It simplifies the sharing process by consolidating multiple links into one, ensuring that your followers, visitors, and customers can effortlessly access all they need in a single location.',
+      'Givee is a singular link solution designed to bridge your audience to every aspect of your digital presence—encompassing who you are, what you do, and what matters to you. It simplifies the sharing process by consolidating multiple links into one, ensuring that your followers, visitors, and customers can effortlessly access all they need in a single location.',
   },
   {
     question: 'Is it free?',
@@ -37,9 +37,9 @@ const landingPageQuestions = [
 
 const pricingQuestions = [
   {
-    question: 'What is Linky?',
+    question: 'What is Givee?',
     answer:
-      "Linky is a single link that you can use to house all the links to your social media profiles, websites, and other content. It's a great way to share all your content in one place, whether it be your favourite songs on Spotify, or a link to your latest products.",
+      "Givee is a single link that you can use to house all the links to your social media profiles, websites, and other content. It's a great way to share all your content in one place, whether it be your favourite songs on Spotify, or a link to your latest products.",
   },
   {
     question: 'Do you offer yearly pricing?',
@@ -47,9 +47,9 @@ const pricingQuestions = [
       'For teams that require a more tailored solution, we are happy to offer a more custom billing solution. Please reach out to us to discuss your needs.',
   },
   {
-    question: 'I am an agency, can I use Linky for my clients?',
+    question: 'I am an agency, can I use Givee for my clients?',
     answer:
-      "Yes, you can use Linky for your clients. You would be best suited for the team plan where you can invite your teammates to manage your clients' pages. We also offer the ability to create separate team spaces for each of your clients, where you can manage their pages. Please reach out to us to discuss your needs.",
+      "Yes, you can use Givee for your clients. You would be best suited for the team plan where you can invite your teammates to manage your clients' pages. We also offer the ability to create separate team spaces for each of your clients, where you can manage their pages. Please reach out to us to discuss your needs.",
   },
   {
     question: 'What methods of payment do you support?',

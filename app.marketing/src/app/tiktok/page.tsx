@@ -5,7 +5,7 @@ import { MarketingContainer } from '@/components/marketing-container';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'TikTok link-in-bio generator | Linky',
+  title: 'TikTok link-in-bio generator | Givee',
   description:
     'Use our magic generator to create your own customisable link-in-bio from your TikTok profile!',
 };

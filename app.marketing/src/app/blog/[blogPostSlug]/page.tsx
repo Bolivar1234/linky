@@ -77,7 +77,7 @@ export default async function BlogPostPage({
       name: 'Linky',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://lin.ky/assets/logo.png',
+        url: 'https://giv.e/assets/logo.png',
       },
     },
     datePublished: blogPost.displayedPublishedAt,
@@ -88,28 +88,28 @@ export default async function BlogPostPage({
   const shareIcons = [
     {
       name: 'X / Twitter',
-      href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://lin.ky/i/blog/${blogPost.slug}`)}&text=${encodeURIComponent(blogPost.title)}`,
-      icon: 'https://cdn.lin.ky/default-data/icons/twitter-x.svg',
+      href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://giv.e/i/blog/${blogPost.slug}`)}&text=${encodeURIComponent(blogPost.title)}`,
+      icon: 'https://cdn.giv.e/default-data/icons/twitter-x.svg',
     },
     {
       name: 'Facebook',
-      href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://lin.ky/i/blog/${blogPost.slug}`)}`,
-      icon: 'https://cdn.lin.ky/default-data/icons/facebook.svg',
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://giv.e/i/blog/${blogPost.slug}`)}`,
+      icon: 'https://cdn.giv.e/default-data/icons/facebook.svg',
     },
     {
       name: 'LinkedIn',
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://lin.ky/i/blog/${blogPost.slug}`)}`,
-      icon: 'https://cdn.lin.ky/default-data/icons/linkedin.svg',
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://giv.e/i/blog/${blogPost.slug}`)}`,
+      icon: 'https://cdn.giv.e/default-data/icons/linkedin.svg',
     },
     {
       name: 'Reddit',
-      href: `https://www.reddit.com/submit?url=${encodeURIComponent(`https://lin.ky/i/blog/${blogPost.slug}`)}&title=${encodeURIComponent(blogPost.title)}`,
-      icon: 'https://cdn.lin.ky/default-data/icons/reddit.svg',
+      href: `https://www.reddit.com/submit?url=${encodeURIComponent(`https://giv.e/i/blog/${blogPost.slug}`)}&title=${encodeURIComponent(blogPost.title)}`,
+      icon: 'https://cdn.giv.e/default-data/icons/reddit.svg',
     },
     {
       name: 'WhatsApp',
-      href: `https://api.whatsapp.com/send?text=${encodeURIComponent(blogPost.title + ' https://lin.ky/i/blog/' + blogPost.slug)}`,
-      icon: 'https://cdn.lin.ky/default-data/icons/whatsapp.svg',
+      href: `https://api.whatsapp.com/send?text=${encodeURIComponent(blogPost.title + ' https://giv.e/i/blog/' + blogPost.slug)}`,
+      icon: 'https://cdn.giv.e/default-data/icons/whatsapp.svg',
     },
   ];
 

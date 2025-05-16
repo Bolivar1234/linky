@@ -69,10 +69,10 @@ export default async function AcceptInvitePage(props: {
           </AvatarFallback>
         </Avatar>
         <h1 className="text-2xl font-bold text-slate-900 mb-2">
-          Join {invite?.organization.name} on Linky!
+          Join {invite?.organization.name} on Givee!
         </h1>
         <p className="mb-4 max-w-md mx-auto text-pretty">
-          You&apos;ve been invited to join {invite?.organization.name} on Linky
+          You&apos;ve been invited to join {invite?.organization.name} on Givee
           by {invite?.inviter.name}.
           <br />
           {session?.data

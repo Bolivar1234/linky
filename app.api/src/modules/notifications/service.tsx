@@ -106,8 +106,8 @@ export async function sendOrganizationInvitationEmail({
 
 export async function sendWelcomeEmail(email: string) {
   return sendEmail({
-    from: 'Alex from Givee <alex@notifications.giv.ee>',
-    replyTo: 'alex@giv.ee',
+    from: 'Dan from Givee <Dan@notifications.giv.ee>',
+    replyTo: 'Dan@giv.ee',
     email,
     subject: 'Welcome to Givee',
     react: <WelcomeEmail />,
@@ -118,14 +118,14 @@ export async function sendWelcomeFollowUpEmail(email: string) {
   const twentyThreeHoursFromNow = new Date(Date.now() + 23 * 60 * 60 * 1000);
 
   return sendEmail({
-    from: 'Alex <alex@notifications.giv.ee>',
-    replyTo: 'alex@giv.ee',
+    from: 'Dan <Dan@notifications.giv.ee>',
+    replyTo: 'Dan@giv.ee',
     email,
     subject: 'Re: Welcome to Givee',
     scheduledAt: twentyThreeHoursFromNow,
     text: `Hey,
 
-I'm Alex, the founder of Givee. Welcome!
+I'm Dan, the founder of Givee. Welcome!
 
 I wanted to reach out to see how you're finding using Givee so far?
 
@@ -135,7 +135,7 @@ If you're looking for inspiration, we've also recently launched the explore gall
 
 If you have any questions or have any issues using the platform, feel free to respond to this email (I respond to every email personally).
 
-Alex`,
+Dan`,
   });
 }
 

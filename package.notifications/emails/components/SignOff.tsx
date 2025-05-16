@@ -1,7 +1,7 @@
 import { Text } from '@react-email/components';
 import React from 'react';
 
-export function SignOff({ label = 'The Linky Team' }: { label?: string }) {
+export function SignOff({ label = 'The Givee Team' }: { label?: string }) {
   return <Text style={styles}>— {label}</Text>;
 }
 

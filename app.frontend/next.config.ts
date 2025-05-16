@@ -17,23 +17,6 @@ const nextConfig: NextConfig = {
       destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/:path*`,
     },
   ],
-  redirects: async () => [
-    {
-      source: '/pricing',
-      destination: '/i/pricing',
-      permanent: true,
-    },
-    {
-      source: '/i/learn/what-is-glow',
-      destination: '/i/learn/what-is-linky',
-      permanent: true,
-    },
-    {
-      source: '/i/learn/is-glow-free',
-      destination: '/i/learn/is-linky-free',
-      permanent: true,
-    },
-  ],
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   logging: {
     fetches: {
@@ -48,22 +31,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.dev.glow.as',
+        hostname: 'cdn.dev.giv.ee',
         port: '',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.glow.as',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.dev.lin.ky',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.lin.ky',
+        hostname: 'cdn.giv.ee',
         port: '',
       },
     ],

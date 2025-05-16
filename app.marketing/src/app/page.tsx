@@ -70,7 +70,7 @@ export default async function LandingPage() {
                   styles.subtitle
                 )}
               >
-                Linky is the open source link-in-bio that integrates with your
+               Givee is the open source link-in-bio that integrates with your
                 favorite platforms to keep your page fresh.
               </span>
 
@@ -81,7 +81,7 @@ export default async function LandingPage() {
                 )}
               >
                 <div className="w-full inline-flex flex-row items-center rounded-full bg-white pl-4 border border-slate-200 shadow-sm justify-center">
-                  <span className="text-slate-600 font-medium">lin.ky/</span>
+                  <span className="text-slate-600 font-medium">giv.ee/</span>
                   <input
                     type="text"
                     placeholder="name"
@@ -123,7 +123,7 @@ export default async function LandingPage() {
                     width={28}
                     height={28}
                     className="inline-block h-7 w-7 rounded-full ring-2 ring-[##ebc7e2]"
-                    src="https://cdn.lin.ky/block-4cc796c0-018b-46e7-af22-77e3ac421882/32b1a2eb-2a3f-4133-aee2-9b016bc38cc8"
+                    src="https://cdn.giv.ee/block-4cc796c0-018b-46e7-af22-77e3ac421882/32b1a2eb-2a3f-4133-aee2-9b016bc38cc8"
                     alt=""
                   />
                   <Image
@@ -235,7 +235,7 @@ export default async function LandingPage() {
       <section className="py-20 md:py-16 bg-[#f5f3ea]">
         <MarketingContainer>
           <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-8">
-            What makes Linky special?
+            What makes Givee special?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 w-full">
@@ -252,7 +252,7 @@ export default async function LandingPage() {
                   Dynamic
                 </h3>
                 <p className="text-base text-black/80">
-                  Linky does the hard work for you, fetching all of the latest
+                 Givee does the hard work for you, fetching all of the latest
                   content to keep your page fresh.
                 </p>
               </div>

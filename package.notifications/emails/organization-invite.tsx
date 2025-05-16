@@ -26,16 +26,16 @@ export default function OrganizationInviteEmail({
   return (
     <Html>
       <Head />
-      <Preview>Join your team on Linky</Preview>
+      <Preview>Join your team on Givee</Preview>
       <Tailwind>
         <Body style={styles.main}>
           <Container style={styles.container}>
             <Logo />
-            <EmailHeader title="Join your team on Linky" />
+            <EmailHeader title="Join your team on Givee" />
 
             <Section>
               <Text style={styles.paragraph}>
-                You've been invited to join a team on Linky. To accept the
+                You've been invited to join a team on Givee. To accept the
                 invite, click the link below.
               </Text>
 

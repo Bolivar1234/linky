@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Explore - Linky',
+  title: 'Explore - Givee',
 };
 
 export default async function ExploreLandingPage() {
@@ -25,7 +25,7 @@ export default async function ExploreLandingPage() {
               <div className="mt-6 max-w-3xl text-xl text-slate-900">
                 <p>
                   Explore some of the best link-in-bio pages created by the
-                  Linky community.
+                 Givee community.
                 </p>
               </div>
             </div>

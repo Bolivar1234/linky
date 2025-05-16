@@ -44,7 +44,7 @@ export function PremiumOnboardingDialog() {
             />
           </svg>
           <DialogTitle className="text-center font-bold text-2xl mb-1">
-            Welcome to Linky Premium!
+            Welcome to Givee Premium!
           </DialogTitle>
           <span className="text-center text-slate-600">
             Your account has been upgraded.
@@ -97,7 +97,7 @@ export function TeamOnboardingDialog() {
             />
           </svg>
           <DialogTitle className="text-center font-bold text-2xl mb-1">
-            Welcome to Linky for Teams!
+            Welcome to Givee for Teams!
           </DialogTitle>
           <span className="text-center text-slate-600">
             Your account has been upgraded.

@@ -15,14 +15,14 @@ export default function TrialEndingSoonEmail() {
   return (
     <Html>
       <Head />
-      <Preview>Your Premium Linky trial is ending soon</Preview>
+      <Preview>Your Premium Givee trial is ending soon</Preview>
       <Tailwind>
         <Body style={styles.main}>
           <Container style={styles.container}>
             <Logo />
             <EmailHeader
               title="Your trial is ending soon"
-              subtitle="You've got 3 days left of Linky Premium"
+              subtitle="You've got 3 days left of Givee Premium"
             />
 
             <Section>
@@ -34,7 +34,7 @@ export default function TrialEndingSoonEmail() {
 
               <Text style={styles.paragraph}>
                 Please note, that if you don't extend your trial within 3 days
-                you will lose access to your Linky Premium features.
+                you will lose access to your Givee Premium features.
               </Text>
               <SignOff />
             </Section>
