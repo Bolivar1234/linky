@@ -21,7 +21,7 @@ services:
     region: virginia
 
     buildCommand: |
-      npm install &&
+      npm install --platform=linux --arch=x64 &&
       turbo run prisma:migrate prisma:generate --filter=@trylinky/prisma &&
       turbo run build:api --filter=@trylinky/api
 
