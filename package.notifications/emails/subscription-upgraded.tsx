@@ -50,7 +50,7 @@ export default function SubscriptionUpgradedEmail({
                   </Text>
                   <Text style={styles.paragraph}>
                     If you have any other questions about your subscription,
-                    please send us a message at support@lin.ky.
+                    please send us a message at support@giv.ee.
                   </Text>
                 </>
               )}
@@ -64,7 +64,7 @@ export default function SubscriptionUpgradedEmail({
                   </Text>
                   <Text style={styles.paragraph}>
                     If you have any other questions about your subscription,
-                    please send us a message at support@lin.ky.
+                    please send us a message at support@giv.ee.
                   </Text>
                 </>
               )}

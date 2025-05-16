@@ -15,10 +15,10 @@ import React from 'react';
 export async function sendEmail({
   email,
   subject,
-  from = 'Linky <team@notifications.lin.ky>',
+  from = 'Givee <team@notifications.giv.ee>',
   react,
   text,
-  replyTo = 'team@lin.ky',
+  replyTo = 'team@giv.ee',
   scheduledAt,
 }: {
   email: string;
@@ -37,7 +37,6 @@ export async function sendEmail({
   }
 
   const isValidEmail = validateEmail(email);
-
   if (!isValidEmail) {
     console.warn('Invalid email, skipping email send');
     return;
@@ -51,7 +50,7 @@ export async function sendEmail({
       subject,
       react,
       text,
-      scheduledAt,
+      scheduledAt: scheduledAt?.toISOString(),
     });
 
     if (error) {
@@ -62,30 +61,28 @@ export async function sendEmail({
     console.error('Error sending email', error);
     captureException(error);
   }
-
-  return;
 }
 
 export async function sendTrialReminderEmail(email: string) {
-  return await sendEmail({
+  return sendEmail({
     email,
-    subject: 'Your Linky Premium trial is ending soon',
+    subject: 'Your Givee Premium trial is ending soon',
     react: <TrialEndingSoonEmail />,
   });
 }
 
 export async function sendTrialEndedEmail(email: string) {
-  return await sendEmail({
+  return sendEmail({
     email,
-    subject: 'Your Linky Premium trial has ended',
+    subject: 'Your Givee Premium trial has ended',
     react: <TrialFinishedEmail />,
   });
 }
 
 export async function sendSubscriptionDeletedEmail(email: string) {
-  return await sendEmail({
+  return sendEmail({
     email,
-    subject: 'Your Linky subscription has been cancelled',
+    subject: 'Your Givee subscription has been cancelled',
     react: <SubscriptionCancelledEmail />,
   });
 }
@@ -100,19 +97,19 @@ export async function sendOrganizationInvitationEmail({
   teamName: string;
   inviteLink: string;
 }) {
-  return await sendEmail({
+  return sendEmail({
     email,
-    subject: "You've been invited to join a team on Linky",
+    subject: "You've been invited to join a team on Givee",
     react: <OrganizationInviteEmail inviteUrl={inviteLink} />,
   });
 }
 
 export async function sendWelcomeEmail(email: string) {
-  return await sendEmail({
-    from: 'Alex from Linky<alex@notifications.lin.ky>',
-    replyTo: 'alex@lin.ky',
+  return sendEmail({
+    from: 'Alex from Givee <alex@notifications.giv.ee>',
+    replyTo: 'alex@giv.ee',
     email,
-    subject: 'Welcome to Linky',
+    subject: 'Welcome to Givee',
     react: <WelcomeEmail />,
   });
 }
@@ -120,13 +117,25 @@ export async function sendWelcomeEmail(email: string) {
 export async function sendWelcomeFollowUpEmail(email: string) {
   const twentyThreeHoursFromNow = new Date(Date.now() + 23 * 60 * 60 * 1000);
 
-  return await sendEmail({
-    from: 'Alex<alex@notifications.lin.ky>',
-    replyTo: 'alex@lin.ky',
+  return sendEmail({
+    from: 'Alex <alex@notifications.giv.ee>',
+    replyTo: 'alex@giv.ee',
     email,
-    subject: 'Re: Welcome to Linky',
+    subject: 'Re: Welcome to Givee',
     scheduledAt: twentyThreeHoursFromNow,
-    text: "Hey,\n\nI'm Alex, the founder of Linky. Welcome!\n\nI wanted to reach out to see how you're finding using Linky so far?\n\nAs someone who has been creating content online for the past 15 years, I built Linky as a tool to make it easier to start building your presence online.\n\nIf you're looking for inspiration, we've also recently launched the explore gallery (lin.ky/i/explore), where you can find some of our favorite pages from the community.\n\nIf you have any questions or have any issues using the platform, feel free to respond to this email (I respond to every email personally).\n\nAlex",
+    text: `Hey,
+
+I'm Alex, the founder of Givee. Welcome!
+
+I wanted to reach out to see how you're finding using Givee so far?
+
+As someone who has been creating content online for the past 15 years, I built Givee as a tool to make it easier to start building your presence online.
+
+If you're looking for inspiration, we've also recently launched the explore gallery (giv.ee/i/explore), where you can find some of our favorite pages from the community.
+
+If you have any questions or have any issues using the platform, feel free to respond to this email (I respond to every email personally).
+
+Alex`,
   });
 }
 
@@ -137,9 +146,9 @@ export async function sendMagicLinkEmail({
   email: string;
   url: string;
 }) {
-  return await sendEmail({
+  return sendEmail({
     email,
-    subject: 'Verify your Linky login',
+    subject: 'Verify your Givee login',
     react: <MagicLinkEmail url={url} />,
   });
 }
@@ -149,9 +158,9 @@ export async function sendSubscriptionUpgradedTeamEmail({
 }: {
   email: string;
 }) {
-  return await sendEmail({
+  return sendEmail({
     email,
-    subject: 'Your Linky subscription has been upgraded',
+    subject: 'Your Givee subscription has been upgraded',
     react: <SubscriptionUpgradedEmail planName="team" />,
   });
 }
@@ -161,9 +170,9 @@ export async function sendSubscriptionUpgradedPremiumEmail({
 }: {
   email: string;
 }) {
-  return await sendEmail({
+  return sendEmail({
     email,
-    subject: 'Your Linky subscription has been upgraded',
+    subject: 'Your Givee subscription has been upgraded',
     react: <SubscriptionUpgradedEmail planName="premium" />,
   });
 }

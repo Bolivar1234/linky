@@ -1,13 +1,13 @@
 export const prices = {
   development: {
-    freeLegacy: 'price_1Qzm2LJKLsVNmaiRvZE2YGN4',
-    premium: 'price_1QA7JEJKLsVNmaiRillvBTsw',
-    team: 'price_1R1OgeJKLsVNmaiREVIN3JNL',
+    freeLegacy: 'price_1RP9FjPwpCesJD7ZBwKCChxh',
+    premium: 'price_1RP9FjPwpCesJD7ZBwKCChxh',
+    team: 'price_1RP9FjPwpCesJD7ZBwKCChxh',
   },
   production: {
-    freeLegacy: 'price_1QzlZJJKLsVNmaiRvRdmReAD',
-    premium: 'price_1R3asyJKLsVNmaiRJft5GJrG',
-    team: 'price_1R3aueJKLsVNmaiR5EZ7pCg8',
+    freeLegacy: 'price_1RNRNgLUEZstCukvNlwI8g6P',
+    premium: 'price_1RNRNgLUEZstCukvNlwI8g6P',
+    team: 'price_1RNRNgLUEZstCukvNlwI8g6P',
   },
 };
 

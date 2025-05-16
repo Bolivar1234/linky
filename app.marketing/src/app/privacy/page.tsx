@@ -15,7 +15,7 @@ export default function LegalPrivacyPage() {
             Welcome to Linky. We are committed to protecting your personal
             information and your right to privacy. If you have any questions or
             concerns about this privacy policy, or our practices with regards to
-            your personal information, please contact us at support@lin.ky.
+            your personal information, please contact us at support@giv.ee.
           </p>
           <p>
             When you visit our web app lin.ky and use our services, you trust us
@@ -94,7 +94,7 @@ export default function LegalPrivacyPage() {
           <h2 className="font-srf">9. Deleting your data</h2>
           <p>
             You can request your account and all data to be deleted by
-            contacting as at support@lin.ky. Please include your email address
+            contacting as at support@giv.ee. Please include your email address
             that you used to register for the Web App.
           </p>
           <h2 className="font-srf">10. Changes to This Privacy Policy</h2>
@@ -105,7 +105,7 @@ export default function LegalPrivacyPage() {
           <h2 className="font-srf">11. Contact Us</h2>
           <p>
             If you have any questions or suggestions about our Privacy Policy,
-            do not hesitate to contact us at support@lin.ky
+            do not hesitate to contact us at support@giv.ee
           </p>
         </div>
       </div>

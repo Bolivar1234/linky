@@ -30,7 +30,7 @@ export default function LegalTermsPage() {
           <p>
             If you do not agree with (or cannot comply with) Agreements, then
             you may not use the Service, but please let us know by emailing at
-            support@lin.ky so we can try to find a solution. These Terms apply
+            support@giv.ee so we can try to find a solution. These Terms apply
             to all visitors, users and others who wish to access or use Service.
           </p>
           <h2 className="font-srf">2. Communications</h2>
@@ -39,7 +39,7 @@ export default function LegalTermsPage() {
             marketing or promotional materials and other information we may
             send. However, you may opt out of receiving any, or all, of these
             communications from us by following the unsubscribe link or by
-            emailing at support@lin.ky.
+            emailing at support@giv.ee.
           </p>
           <h2 className="font-srf">3. Purchases</h2>
           <p>
@@ -120,7 +120,7 @@ export default function LegalTermsPage() {
           </p>
           <h2 className="font-srf">11. Error Reporting and Feedback</h2>
           <p>
-            You may provide us directly at support@lin.ky with information and
+            You may provide us directly at support@giv.ee with information and
             feedback concerning errors, suggestions for improvements, ideas,
             problems, complaints, and other matters related to our Service.
           </p>
@@ -166,7 +166,7 @@ export default function LegalTermsPage() {
           <h2 className="font-srf">18. Contact Us</h2>
           <p>
             Please send your feedback, comments, requests for technical support
-            by email: support@lin.ky.
+            by email: support@giv.ee.
           </p>
           <p>Linky - lin.ky</p>
         </div>

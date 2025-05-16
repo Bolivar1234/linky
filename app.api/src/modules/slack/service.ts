@@ -5,7 +5,7 @@ import { User } from 'better-auth';
 const slackClient = new WebClient(process.env.SLACK_TOKEN);
 
 const slackChannels = {
-  default: 'C08GWNF2MHV',
+  default: 'C08SH1E18RW',
 };
 
 export async function sendSlackMessage({

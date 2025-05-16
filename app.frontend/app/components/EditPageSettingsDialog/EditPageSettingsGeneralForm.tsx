@@ -154,7 +154,7 @@ export function EditPageSettingsGeneral({ initialValues, pageId }: Props) {
                     Add a custom domain to your page for a one-time fee of{' '}
                     <del>$10</del> <ins className="font-semibold">$5</ins>. This
                     feature is still in beta, and you can enable it by reaching
-                    out to us at <a href="mailto:team@lin.ky">team@lin.ky</a>.
+                    out to us at <a href="mailto:team@giv.ee">team@giv.ee</a>.
                   </span>
                 </div>
               </div>

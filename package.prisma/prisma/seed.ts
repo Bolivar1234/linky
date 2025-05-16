@@ -11,7 +11,7 @@ async function main() {
     update: {},
     create: {
       name: 'Initial User',
-      email: 'hello@lin.ky',
+      email: 'hello@giv.ee',
       emailVerified: true,
       role: 'user',
     },

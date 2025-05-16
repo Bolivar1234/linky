@@ -181,7 +181,7 @@ export function EditTeamSettingsMembers({ onCancel, members, invites }: Props) {
                 <FormField
                   label="Email"
                   name="email"
-                  placeholder="hey@lin.ky"
+                  placeholder="hey@giv.ee"
                   id="email"
                   error={errors.email}
                 />
