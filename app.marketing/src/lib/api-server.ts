@@ -9,7 +9,14 @@ export const apiServerFetch = async (
     'Content-Type': 'application/json',
   };
 
-  return fetch(`https://api.giv.e${path}`, {
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (!baseUrl) {
+    throw new Error(
+      'Missing NEXT_PUBLIC_API_URL environment variable. This is required to make API calls.'
+    );
+  }
+
+  return fetch(`${baseUrl}${path}`, {
     headers,
     body: requestOptions.body,
     ...requestOptions,

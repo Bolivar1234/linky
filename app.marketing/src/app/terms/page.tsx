@@ -14,7 +14,7 @@ export default function LegalTermsPage() {
           <p>Welcome to Givee (“Company”, “we”, “our”, “us”)!</p>
           <p>
             These Terms of Service (“Terms”, “Terms of Service”) govern your use
-            of our web application located at giv.e (together or individually
+            of our web application located at giv.ee (together or individually
             “Service”) operated by Givee.
           </p>
           <p>

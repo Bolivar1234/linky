@@ -18,7 +18,7 @@ export default function LegalPrivacyPage() {
             your personal information, please contact us at support@giv.ee.
           </p>
           <p>
-            When you visit our web app giv.e and use our services, you trust us
+            When you visit our web app giv.ee and use our services, you trust us
             with your personal information. In this privacy policy, we seek to
             explain to you in the clearest way possible what information we
             collect, how we use it, and what rights you have in relation to it.
