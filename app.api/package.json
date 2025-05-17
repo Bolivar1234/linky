@@ -51,6 +51,6 @@
     "dev": "dotenvx run -f ../.env.local -- tsx watch src",
     "start:api": "node dist/index.js",
     "build:api": "node build.js && npm run sentry:sourcemaps",
-    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org getgivee --project givee ./dist && sentry-cli sourcemaps upload ./dist --org getgivee --project givee"  
+    "sentry:sourcemaps": "export SENTRY_RELEASE=$(git rev-parse --short HEAD || echo 'unknown-release') && sentry-cli releases --org getgivee --project givee new \"$SENTRY_RELEASE\" && sentry-cli sourcemaps inject --org getgivee --project givee ./dist && sentry-cli releases --org getgivee --project givee files \"$SENTRY_RELEASE\" upload-sourcemaps ./dist --rewrite && sentry-cli releases --org getgivee --project givee finalize \"$SENTRY_RELEASE\""
    }
 }
