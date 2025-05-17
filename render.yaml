@@ -21,9 +21,8 @@ services:
     region: virginia
 
     buildCommand: |
-      npm install --platform=linux --arch=x64 &&
-      turbo run prisma:migrate prisma:generate --filter=@trylinky/prisma &&
-      turbo run build:api --filter=@trylinky/api
+       npm install && turbo run prisma:migrate prisma:generate --filter=@trylinky/prisma && turbo run build:api
+      --filter=@trylinky/api
 
     startCommand: turbo run start:api
 
@@ -157,10 +156,15 @@ services:
         sync: false
 
       # Database connections (linked to Render DB above)
-      - key: DIRECT_URL
-        value: postgresql://givee_user:n6X2bnTWufPNDOlWJSJu2H9uP00xN3Hz@dpg-d0j9s5re5dus73c9l2l0-a.virginia-postgres.render.com/givee?pgbouncer=true
-      - key: DATABASE_URL
-        value: postgresql://givee_user:n6X2bnTWufPNDOlWJSJu2H9uP00xN3Hz@dpg-d0j9s5re5dus73c9l2l0-a.virginia-postgres.render.com/givee?pgbouncer=true
+      # In render.yaml, for givee-api service envVars:
+  - key: DATABASE_URL
+    fromDatabase:
+    name: givee-db
+    property: connectionString # Render resolves this to the internal URL
+
+  - key: DIRECT_URL
+    value: "postgresql://givee_user:n6X2bnTWufPNDOlWJSJu2H9uP00xN3Hz@dpg-d0j9s5re5dus73c9l2l0-a.virginia-postgres.render.com/givee"
+
 
     domains:
       - api.giv.ee
