@@ -14,7 +14,7 @@ const learnPostCategories: Record<
     title: string;
   }
 > = {
-  Givee: {
+  linky: {
     title: 'Linky',
   },
   'link-in-bio': {

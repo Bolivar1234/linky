@@ -14,7 +14,7 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.5",
     "@mdx-js/loader": "^3.1.0",
-    "@next/mdx": "^15.1.7",
+    "@next/mdx": "^15.3.2",
     "@sindresorhus/slugify": "^2.2.1",
     "@trylinky/common": "*",
     "@trylinky/ui": "*",
