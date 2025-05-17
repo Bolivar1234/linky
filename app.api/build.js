@@ -9,7 +9,7 @@ await build({
   write: true,
   entryPoints: [`./src/index.ts`],
   inject: ['./cjs-shim.ts'],
-  sourcemap: true,
+  sourcemap: false,
   plugins: [
     dotenvRun({
       verbose: true,
