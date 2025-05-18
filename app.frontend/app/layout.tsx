@@ -2,6 +2,7 @@ import './globals.css';
 import './react-grid-layout.scss';
 import { getSession } from '@/app/lib/auth';
 import { PostHogIdentify, PostHogProvider } from '@/app/posthog-provider';
+import StyledJsxRegistry from '@/app/components/StyledJsxRegistry';
 import { Toaster } from '@trylinky/ui';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
@@ -66,7 +67,7 @@ export default async function RootLayout({
       </head>
       <PostHogProvider>
         <body className="bg-stone-50 min-h-screen relative">
-          {children}
+          <StyledJsxRegistry>{children}</StyledJsxRegistry>
           <Toaster />
         </body>
         {user && (
