@@ -45,10 +45,24 @@ async function handleRootDomain(req: NextRequest, path: string, baseUrl: URL) {
   const searchParams = req.nextUrl.searchParams.toString();
 
   if (path === '/') {
+    const marketingDest = process.env.NEXT_PUBLIC_MARKETING_URL;
+    const search = searchParams ? '?' + searchParams : '';
+    if (marketingDest) {
+      // Construct the full URL for the rewrite
+      const destinationUrl = new URL(`${marketingDest}/i${search}`);
+      return NextResponse.rewrite(destinationUrl);
+    }
+    // Fallback if NEXT_PUBLIC_MARKETING_URL isn't set, though it should be.
+    // This will likely result in a 404 if there's no app.frontend/app/page.tsx
     return NextResponse.next();
   }
 
-  // Rewrite all other paths
+  // Rewrite all other paths (likely for user pages on the root domain)
+  // Ensure this logic is what you intend for paths other than '/' on the root domain.
+  // It currently rewrites example.com/foo to example.com/example.com/foo which might be incorrect.
+  // If these are user slugs, it should perhaps be something like:
+  // baseUrl.pathname = `/${path}`; // Assuming 'path' is the slug
+  // For now, keeping original logic for non-'/' paths:
   baseUrl.pathname = `/${req.headers.get('host')}${path}`;
   baseUrl.search = searchParams;
   return NextResponse.rewrite(baseUrl);
