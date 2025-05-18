@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "npm run copy-tinybird-tracker && dotenvx run -f ../.env.local -- next dev",
-    "copy-tinybird-tracker": "cp ../package.tinybird/dist/tracker.js  public/assets",
+    "copy-tinybird-tracker": "cp ../package.tinybird/dist/tracker.js public/assets",
     "build:frontend": "next build",
     "start:frontend": "next start",
     "lint": "next lint",
-    "vercel:build": "prisma generate && prisma migrate deploy && next build"
+    "vercel:build": "prisma generate && next build"
   },
   "prisma": {
+    "schema": "../package.prisma/schema.prisma",
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
