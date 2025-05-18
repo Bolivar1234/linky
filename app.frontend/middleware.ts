@@ -24,20 +24,38 @@ export default async function middleware(req: NextRequest) {
   const url = req.nextUrl;
 
   // Get hostname and normalize for dev environment - using a regex for better performance
-  const hostname = req.headers
-    .get('host')!
-    .replace(new RegExp(`.dev.glow:3000$`), `.${rootDomain}`);
+  let rawHostname = req.headers.get('host')!;
+  let normalizedHostname = rawHostname;
+
+  // Normalize www. to the root domain for comparison
+  // Ensure rootDomain is defined before using it in startsWith
+  if (rootDomain && rawHostname.startsWith(`www.${rootDomain}`)) {
+    normalizedHostname = rootDomain;
+  }
+  
+  // Normalize for dev environment if applicable
+  // (adjust regex if your dev URLs are different, e.g., if rootDomain itself might be part of the dev URL)
+  if (rootDomain) { // Ensure rootDomain is available for the replace pattern
+    normalizedHostname = normalizedHostname.replace(new RegExp(`\\.dev\\.glow:3000$`), `.${rootDomain}`);
+  }
+  // else if (normalizedHostname.endsWith('.dev.glow:3000')) {
+    // Handle dev normalization if rootDomain is not set, though it should be.
+    // normalizedHostname = normalizedHostname.split('.')[0]; // Example: my-site.dev.glow:3000 -> my-site
+  // }
+
 
   // Create base URL once
   const baseUrl = new URL('', req.url);
 
   // Handle root domain
-  if (hostname === rootDomain) {
+  if (normalizedHostname === rootDomain) {
     return handleRootDomain(req, url.pathname, baseUrl);
   }
 
-  // Handle unknown domains - reuse baseUrl
-  baseUrl.pathname = `/${hostname}/unknown`;
+  // Handle other hostnames (subdomains or custom domains not matching root)
+  // This logic might need review based on your multi-tenancy/subdomain strategy.
+  // Using rawHostname here to capture the original subdomain if it's not the root.
+  baseUrl.pathname = `/${rawHostname}${url.pathname === '/' ? '' : url.pathname}`; // Avoids //unknown for root of subdomain
   return NextResponse.rewrite(baseUrl);
 }
 
