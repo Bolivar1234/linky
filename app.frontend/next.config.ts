@@ -1,22 +1,32 @@
 import { withSentryConfig } from '@sentry/nextjs';
 import type { NextConfig } from 'next';
 
+const marketingURL = process.env.NEXT_PUBLIC_MARKETING_URL;
+
+if (!marketingURL) {
+  console.warn('⚠️ Environment variable NEXT_PUBLIC_MARKETING_URL is not defined. Rewrites will be skipped.');
+}
+
 const nextConfig: NextConfig = {
   transpilePackages: ['@trylinky/ui', '@trylinky/common'],
-  rewrites: async () => [
-    {
-      source: '/',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i`,
-    },
-    {
-      source: '/sitemap.xml',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/sitemap.xml`,
-    },
-    {
-      source: '/i/:path*',
-      destination: `${process.env.NEXT_PUBLIC_MARKETING_URL}/i/:path*`,
-    },
-  ],
+  rewrites: async () => {
+    if (!marketingURL) return [];
+
+    return [
+      {
+        source: '/',
+        destination: `${marketingURL}/i`,
+      },
+      {
+        source: '/sitemap.xml',
+        destination: `${marketingURL}/i/sitemap.xml`,
+      },
+      {
+        source: '/i/:path*',
+        destination: `${marketingURL}/i/:path*`,
+      },
+    ];
+  },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   logging: {
     fetches: {
