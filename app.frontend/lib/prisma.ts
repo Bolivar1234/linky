@@ -1,30 +1,23 @@
-import { withAccelerate } from '@prisma/extension-accelerate';
-import { withOptimize } from '@prisma/extension-optimize';
 import { PrismaClient } from '@trylinky/prisma';
 import 'server-only';
 
+// Optional: query logging in dev only
 const prismaClientSingleton = () => {
-  if (!process.env.PRISMA_OPTIMIZE_API_KEY) {
-    return new PrismaClient()
-      .$extends({
-        query: {
-          async $allOperations({ model, operation, args, query }) {
-            const before = Date.now();
-            const result = await query(args);
-            const after = Date.now();
+  return new PrismaClient().$extends({
+    query: {
+      async $allOperations({ model, operation, args, query }) {
+        const before = Date.now();
+        const result = await query(args);
+        const after = Date.now();
 
-            console.log(`Query ${model}.${operation} took ${after - before}ms`);
+        if (process.env.NODE_ENV !== 'production') {
+          console.log(`Query ${model}.${operation} took ${after - before}ms`);
+        }
 
-            return result;
-          },
-        },
-      })
-      .$extends(withAccelerate());
-  }
-
-  return new PrismaClient()
-    .$extends(withOptimize({ apiKey: process.env.PRISMA_OPTIMIZE_API_KEY }))
-    .$extends(withAccelerate());
+        return result;
+      },
+    },
+  });
 };
 
 type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>;
