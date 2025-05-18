@@ -11,16 +11,14 @@
     "vercel:build": "prisma generate && next build"
   },
   "prisma": {
-    "schema": "../package.prisma/schema.prisma",
+    "schema": "../package.prisma/prisma/schema.prisma",
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.5",
     "@number-flow/react": "^0.4.2",
-    "@prisma/client": "^6.4.0",
-    "@prisma/extension-accelerate": "^1.2.2",
-    "@prisma/extension-optimize": "^1.1.4",
+    "@prisma/client": "6.4.0",
     "@react-google-maps/api": "^2.20.3",
     "@reactour/tour": "^3.7.0",
     "@sentry/nextjs": "^9.1.0",
