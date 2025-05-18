@@ -1,24 +1,28 @@
 import { FlatCompat } from '@eslint/eslintrc';
+import parser from '@typescript-eslint/parser';
 
-
-import pkg from '@typescript-eslint/parser';
-const { parser } = pkg;
-
-const compat = new FlatCompat();
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+});
 
 export default [
+  ...compat.extends('next/core-web-vitals'),
+
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      parser: '@typescript-eslint/parser',
+      parser,
       parserOptions: {
         project: [
-          'app.*/tsconfig.json',
-          'package.*/tsconfig.json',
-          'tsconfig.json',
-          'prettier.config.js',
+          './tsconfig.json',
+          './app.*/tsconfig.json',
+          './package.*/tsconfig.json',
         ],
+        tsconfigRootDir: import.meta.dirname,
       },
+    },
+    rules: {
+      // You can safely add overrides here
     },
   },
 ];
