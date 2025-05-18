@@ -168,7 +168,7 @@ export default function LegalTermsPage() {
             Please send your feedback, comments, requests for technical support
             by email: support@giv.ee.
           </p>
-          <p>Givee - giv.e</p>
+          <p>Givee - giv.ee</p>
         </div>
       </div>
     </div>

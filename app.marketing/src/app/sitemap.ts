@@ -2,7 +2,7 @@ import { getLearnPosts } from '@/app/learn/utils';
 import { getBlogPosts } from '@/lib/cms/get-blog-posts';
 import { MetadataRoute } from 'next';
 
-const baseUrl = `https://giv.e`;
+const baseUrl = `https://giv.ee`;
 
 const baseSitemap = [
   {

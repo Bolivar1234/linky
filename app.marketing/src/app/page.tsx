@@ -123,7 +123,7 @@ export default async function LandingPage() {
                     width={28}
                     height={28}
                     className="inline-block h-7 w-7 rounded-full ring-2 ring-[##ebc7e2]"
-                    src="https://cdn.giv.ee/block-4cc796c0-018b-46e7-af22-77e3ac421882/32b1a2eb-2a3f-4133-aee2-9b016bc38cc8"
+                    src="https://cdn.lin.ky/block-4cc796c0-018b-46e7-af22-77e3ac421882/32b1a2eb-2a3f-4133-aee2-9b016bc38cc8"
                     alt=""
                   />
                   <Image

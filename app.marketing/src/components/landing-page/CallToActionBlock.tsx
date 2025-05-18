@@ -93,7 +93,7 @@ export function CallToActionBlock() {
 
           <div className="mt-6">
             <div className="w-full md:w-auto inline-flex flex-row items-center rounded-full bg-white pl-4 border border-slate-200 shadow-sm">
-              <span className="text-slate-600 font-medium">giv.e/</span>
+              <span className="text-slate-600 font-medium">giv.ee/</span>
               <input
                 type="text"
                 placeholder="name"

@@ -195,14 +195,14 @@ export const StackMockup = ({ className }: { className?: string }) => {
       title: 'Figma',
       label: 'Design',
       icon: {
-        src: 'https://cdn.giv.e/default-data/figma.jpeg',
+        src: 'https://cdn.giv.ee/default-data/figma.jpeg',
       },
     },
     {
       title: 'Warp',
       label: 'Engineering',
       icon: {
-        src: 'https://cdn.giv.e/default-data/warp.png',
+        src: 'https://cdn.giv.ee/default-data/warp.png',
       },
     },
   ];
@@ -265,17 +265,17 @@ export const LinkBoxMockup = ({
     }
   > = {
     x: {
-      icon: 'https://cdn.giv.e/default-data/x-logo.png',
+      icon: 'https://cdn.giv.ee/default-data/x-logo.png',
       title: 'X / Twitter',
       username: '@trylinky',
     },
     instagram: {
-      icon: 'https://cdn.giv.e/default-data/icons/instagram.svg',
+      icon: 'https://cdn.giv.ee/default-data/icons/instagram.svg',
       title: 'Instagram',
       username: '@trylinky',
     },
     linkedin: {
-      icon: 'https://cdn.giv.e/default-data/icons/linkedin.svg',
+      icon: 'https://cdn.giv.ee/default-data/icons/linkedin.svg',
       title: 'LinkedIn',
       username: '@trylinky',
     },

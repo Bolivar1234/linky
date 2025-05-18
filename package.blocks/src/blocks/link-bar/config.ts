@@ -13,7 +13,7 @@ export const linkBarBlockDefaults: LinkBarBlockConfig = {
   links: [
     {
       link: 'https://x.com/trylinky',
-      icon: { src: 'https://cdn.giv.e/default-data/icons/twitter.svg' },
+      icon: { src: 'https://cdn.giv.ee/default-data/icons/twitter.svg' },
     },
   ],
 };

@@ -6,7 +6,7 @@ export const authors: Author[] = [
     name: 'Alex',
     position: 'Founder',
     avatar:
-      'https://cdn.giv.e/block-f5a2d44d-6933-4a51-a9e2-9fbb27923585/f4fdd080-46be-483f-9b04-e5646efb157d',
+      'https://cdn.lin.ky/block-f5a2d44d-6933-4a51-a9e2-9fbb27923585/f4fdd080-46be-483f-9b04-e5646efb157d',
     link: 'https://x.com/alexjpate',
     linkyUsername: 'alex',
     linkyLink: 'https://alex.now',
@@ -16,19 +16,19 @@ export const authors: Author[] = [
     name: 'Jack',
     position: 'Co-founder',
     avatar:
-      'https://cdn.giv.e/666b7445-c171-4ad7-a21d-eb1954b7bd40/0885d7ec-9af4-4430-94f4-ad1a033c2704',
+      'https://cdn.giv.ee/666b7445-c171-4ad7-a21d-eb1954b7bd40/0885d7ec-9af4-4430-94f4-ad1a033c2704',
     link: 'https://x.com/trylinky',
     linkyUsername: 'jack',
-    linkyLink: 'https://giv.e/jack',
+    linkyLink: 'https://giv.ee/jack',
   },
   {
     id: 'hana',
     name: 'Hana',
     position: 'Writer',
     avatar:
-      'https://cdn.giv.e/block-ff6eea95-d511-4a8d-a428-998dacb63330/45da882f-bab8-4f86-8a82-33c00ca95989.webp',
-    link: 'https://giv.e/hana',
+      'https://cdn.lin.kyff6eea95-d511-4a8d-a428-998dacb63330/45da882f-bab8-4f86-8a82-33c00ca95989.webp',
+    link: 'https://giv.ee/hana',
     linkyUsername: 'hana',
-    linkyLink: 'https://giv.e/hana',
+    linkyLink: 'https://giv.ee/hana',
   },
 ];

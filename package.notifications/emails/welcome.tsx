@@ -23,7 +23,7 @@ const WelcomeEmail = () => (
           <EmailHeader
             title="Welcome to Givee"
             subtitle="The delightfully rich link-in-bio"
-            imageUrl="https://cdn.giv.e/email-assets/welcome-header.png"
+            imageUrl="https://cdn.giv.ee/email-assets/welcome-header.png"
             imageAlt="Welcome to Givee"
           />
 
@@ -43,7 +43,7 @@ const WelcomeEmail = () => (
 
             <ul style={styles.list}>
               <li style={styles.listItem}>
-                <Link href="https://giv.e/edit" style={styles.link}>
+                <Link href="https://giv.ee/edit" style={styles.link}>
                   Setup your first page
                 </Link>
               </li>

@@ -4,7 +4,7 @@ import React from 'react';
 export function Logo() {
   return (
     <Img
-      src="https://giv.e/assets/logo.png"
+      src="https://giv.ee/assets/logo.png"
       width="42"
       height="42"
       alt="Linky"

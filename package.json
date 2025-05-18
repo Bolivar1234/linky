@@ -2,7 +2,7 @@
   "name": "@trylinky/linky",
   "version": "1.0.0",
   "private": true,
-  "repository": "https://github.com/trylinky/linky.git",
+  "repository": "https://github.com/bolivar1234/linky.git",
   "workspaces": [
     "app.api",
     "app.frontend",
@@ -30,7 +30,10 @@
   },
   "overrides": {
   "@types/react": "19.0.10",
-  "@types/react-dom": "19.0.4"
+  "@types/react-dom": "19.0.4",
+  "prisma": "6.4.0",
+  "@prisma/client": "6.4.0"
+
 },
   "scripts": {
     "lint": "turbo lint",
